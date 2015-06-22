@@ -16,8 +16,7 @@ public class Gestion_dom {
 		new TransInfoHtml("./modele/dataSympsiumSponsoring/DataSponsoringSymposium.htm","./modele/dataSympsiumSponsoring/extDataSponsoringSymposium.xsl");	
 		new TransInfoHtml("./modele/dataStandsSponsoring/DataStandsSponsoring.htm","./modele/dataStandsSponsoring/extDataStandsSponsoring.xsl");	
 		new TransInfoHtml("./modele/dataDetailSponsoring/DataDetailSponsoring.htm","./modele/dataDetailSponsoring/extDetailSponsoring.xsl");	
-		
-	
+		System.out.println("Test fab");
 	}
 }
 
