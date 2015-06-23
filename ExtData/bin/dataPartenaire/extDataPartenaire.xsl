@@ -6,14 +6,22 @@
   <xsl:template match="/HTML">
 			
 			<xsl:for-each select="//TR">
-			 <xsl:if test="TD[1]!='' ">
-			  <xsl:text>insert into partenaire values (</xsl:text>
-				   <xsl:text>"</xsl:text> <xsl:value-of select="TD[1]"/><xsl:text>",</xsl:text>
-				  <xsl:text>"</xsl:text><xsl:value-of select="TD[2]"/><xsl:text>",</xsl:text>
-				   <xsl:text>"</xsl:text><xsl:value-of select="TD[3]"/><xsl:text>",</xsl:text>
-				   <xsl:text>"</xsl:text><xsl:value-of select="TD[4]"/><xsl:text>"</xsl:text> 
-				    <xsl:text>)&#x0a;</xsl:text>	
-				    </xsl:if>				    
+			 <xsl:if test="TD[1]!='' and TD[2]!='' ">
+			  <xsl:text>insert into partenaire (IDcontact,Societe,AdresseWeb,Matieres,Adresse1,Adresse2,CP,Ville,Cedex,Pays,CodePays) values (</xsl:text>
+				  <xsl:text>"</xsl:text> <xsl:value-of select="translate(TD[1], '&quot;', '')"/><xsl:text>",</xsl:text>
+				  <xsl:text>"</xsl:text><xsl:value-of select="translate(TD[2], '&quot;', '')"/><xsl:text>",</xsl:text>
+				  <xsl:text>"</xsl:text><xsl:value-of select="translate(TD[3], '&quot;', '')"/><xsl:text>",</xsl:text>
+				  <xsl:text>"</xsl:text><xsl:value-of select="translate(TD[4], '&quot;', '')"/><xsl:text>",</xsl:text>
+				  <xsl:text>"</xsl:text><xsl:value-of select="translate(TD[5], '&quot;', '')"/><xsl:text>",</xsl:text> 
+				  <xsl:text>"</xsl:text><xsl:value-of select="translate(TD[6], '&quot;', '')"/><xsl:text>",</xsl:text> 
+				  <xsl:text>"</xsl:text><xsl:value-of select="translate(TD[7], '&quot;', '')"/><xsl:text>",</xsl:text> 
+				  <xsl:text>"</xsl:text><xsl:value-of select="translate(TD[8], '&quot;', '')"/><xsl:text>",</xsl:text> 
+				  <xsl:text>"</xsl:text><xsl:value-of select="translate(TD[9], '&quot;', '')"/><xsl:text>",</xsl:text> 
+				  <xsl:text>"</xsl:text><xsl:value-of select="translate(TD[10], '&quot;', '')"/><xsl:text>",</xsl:text> 
+				  <xsl:text>"</xsl:text><xsl:value-of select="translate(TD[11], '&quot;', '')"/><xsl:text>"</xsl:text>
+			
+					<xsl:text>);&#x0a;</xsl:text>	
+				  </xsl:if>				    
 			</xsl:for-each>
 	</xsl:template>
 

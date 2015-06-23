@@ -9,14 +9,18 @@ public class Gestion_dom {
 	
 	public static void main(String args[]){
 		
-		new TransInfoHtml("./modele/dataContacts/DataContacts.htm","./modele/dataContacts/extDataContact.xsl");	
-		new TransInfoHtml("./modele/dataPartenaire/PartenaireDemo.htm","./modele/dataPartenaire/extDataPartenaire.xsl");		
-		new TransInfoHtml("./modele/dataSuivie/DataSuivi.htm","./modele/dataSuivie/extDataSuivie.xsl");	
-		new TransInfoHtml("./modele/dataSponsoring/DataSponsoring.htm","./modele/dataSponsoring/extDataSponsoring.xsl");		
-		new TransInfoHtml("./modele/dataSympsiumSponsoring/DataSponsoringSymposium.htm","./modele/dataSympsiumSponsoring/extDataSponsoringSymposium.xsl");	
-		new TransInfoHtml("./modele/dataStandsSponsoring/DataStandsSponsoring.htm","./modele/dataStandsSponsoring/extDataStandsSponsoring.xsl");	
-		new TransInfoHtml("./modele/dataDetailSponsoring/DataDetailSponsoring.htm","./modele/dataDetailSponsoring/extDetailSponsoring.xsl");	
-		System.out.println("Test fab");
+		 new TransInfoHtml("./modele/dataPartenaire/dataPartenaire.htm","./modele/dataPartenaire/extDataPartenaire.xsl");		
+		 new TransInfoHtml("./modele/dataContactsPrincipal/dataContact.htm","./modele/dataContactsPrincipal/extDataContact.xsl");	
+		 new TransInfoHtml("./modele/dataSuivie/dataSuiviContact.htm","./modele/dataSuivie/extDataSuivie.xsl");	
+		 new TransInfoHtml("./modele/dataSympsiumSponsoring/dataSympsiumSponsoring.htm","./modele/dataSympsiumSponsoring/extDataSponsoringSymposium.xsl");	
+		 new TransInfoHtml("./modele/dataSponsoring/dataSponsoring.htm","./modele/dataSponsoring/extDataSponsoring.xsl");		
+		 new TransInfoHtml("./modele/dataStandsSponsoring/dataStandsSponsoring.htm","./modele/dataStandsSponsoring/extDataStandsSponsoring.xsl");	
+		 new TransInfoHtml("./modele/dataDetailSponsoring/dataDetailSponsoring.htm","./modele/dataDetailSponsoring/extDetailSponsoring.xsl");	
+		 new TransInfoHtml("./modele/dataInscriptions/dataInscription.htm","./modele/dataInscriptions/extDataContact.xsl");				
+		 new TransInfoHtml("./modele/dataContactSecondaire/dataContactSecondaire.htm","./modele/dataContactSecondaire/extDataContactSecondaire.xsl");		
+		 new TransInfoHtml("./modele/dataContactsPrincipal/dataContact.htm","./modele/dataContactsPrincipal/extDataContact.xsl");	
+		 new TransInfoHtml("./modele/dataContactInterne/dataContactInterne.htm","./modele/dataContactInterne/extDataContactInterne.xsl");	
+		 
 	}
 }
 
