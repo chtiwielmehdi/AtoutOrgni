@@ -7,7 +7,7 @@
 			
 			<xsl:for-each select="//TR">
 			 <xsl:if test="TD[1]!=''  and TD[2]!=''">
-			  <xsl:text>insert into ContactPrincipal (IDcontact,Nom,Prenom,Qualite,Fonction,Service,Telephone,Portable,AdresseEmail,AdresseP1,AdresseP2,CPP,VilleP,CedexP,CodePaysP) values (</xsl:text>
+			  <xsl:text>insert into ContactsPrincipal (IDcontact,Nom,Prenom,Qualite,Fonction,Service,Telephone,Portable,AdresseEmail,AdresseP1,AdresseP2,CPP,VilleP,CedexP,CodePaysP) values (</xsl:text>
 				  <xsl:text>"</xsl:text> <xsl:value-of select="translate(TD[1], '&quot;', '')"/><xsl:text>",</xsl:text>
 				  <xsl:text>"</xsl:text><xsl:value-of select="translate(TD[2], '&quot;', '')"/><xsl:text>",</xsl:text>
 				  <xsl:text>"</xsl:text> <xsl:value-of select="translate(TD[3], '&quot;', '')"/><xsl:text>",</xsl:text>
@@ -22,9 +22,8 @@
 				  <xsl:text>"</xsl:text> <xsl:value-of select="translate(TD[12], '&quot;', '')"/><xsl:text>",</xsl:text>
 				  <xsl:text>"</xsl:text> <xsl:value-of select="translate(TD[13], '&quot;', '')"/><xsl:text>",</xsl:text>
 				  <xsl:text>"</xsl:text> <xsl:value-of select="translate(TD[14], '&quot;', '')"/><xsl:text>",</xsl:text>
-				  <xsl:text>"</xsl:text> <xsl:value-of select="translate(TD[15], '&quot;', '')"/><xsl:text>",</xsl:text>
-				  <xsl:text>"</xsl:text> <xsl:value-of select="translate(TD[16], '&quot;', '')"/><xsl:text>"</xsl:text>
-				
+				  <xsl:text>"</xsl:text> <xsl:value-of select="translate(TD[15], '&quot;', '')"/><xsl:text>"</xsl:text>
+				 
 				 <xsl:text>);&#x0a;</xsl:text>	
 				</xsl:if>		    
 			</xsl:for-each>

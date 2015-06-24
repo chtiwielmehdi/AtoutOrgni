@@ -7,12 +7,14 @@
 			
 			<xsl:for-each select="//TR">
 				<xsl:if test="TD[1]!='' and TD[2] != '' ">
-			  <xsl:text>insert into sympsiumSponsoring (IDcontact,DateSymposium,HoraireSymposium,PrixSymposium) values (</xsl:text>
+			  <xsl:text>insert into sympsiumSponsoring (IDcontact,DateSymposium,HoraireSymposium,PrixSymposium,Theme,PreferenceJ) values (</xsl:text>
 				   <xsl:text>"</xsl:text> <xsl:value-of select="translate(TD[1], '&quot;', '')"/><xsl:text>",</xsl:text>
-				   <xsl:text>"</xsl:text><xsl:value-of select="translate(TD[2], '&quot;', '')"/><xsl:text>",</xsl:text>
-				   <xsl:text>"</xsl:text><xsl:value-of select="translate(TD[3], '&quot;', '')"/><xsl:text>",</xsl:text>
-				   <xsl:text>"</xsl:text><xsl:value-of select="translate(TD[4], '&quot;', '')"/><xsl:text>"</xsl:text>
-				    <xsl:text>);&#x0a;</xsl:text>	
+				   <xsl:text>STR_TO_DATE("</xsl:text><xsl:value-of select="translate(TD[2], '&quot;', '')"/><xsl:text>","%d/%m/%Y"),</xsl:text>
+				  	 <xsl:text>"</xsl:text><xsl:value-of select="translate(TD[3], '&quot;', '')"/><xsl:text>",</xsl:text>
+				   <xsl:text>"</xsl:text><xsl:value-of select="translate(TD[4], '&quot;', '')"/><xsl:text>",</xsl:text>
+				   <xsl:text>"</xsl:text><xsl:value-of select="''"/><xsl:text>",</xsl:text>
+				   <xsl:text>STR_TO_DATE("</xsl:text><xsl:value-of select="translate(0000-00-00, '&quot;', '')"/><xsl:text>","%d/%m/%Y")</xsl:text>
+				  	 <xsl:text>);&#x0a;</xsl:text>	
 				    </xsl:if>		    
 			</xsl:for-each>
 	</xsl:template>

@@ -7,7 +7,7 @@
 			
 			<xsl:for-each select="//TR">
 			 <xsl:if test="TD[1]!='' and TD[2]!='' ">
-			  <xsl:text>insert into partenaire (IDcontact,Societe,AdresseWeb,Matieres,Adresse1,Adresse2,CP,Ville,Cedex,Pays,CodePays) values (</xsl:text>
+			  <xsl:text>insert into Partenaire (IDcontact,Societe,AdresseWeb,Matieres,Adresse1,Adresse2,CP,Ville,Cedex,Pays,CodePays) values (</xsl:text>
 				  <xsl:text>"</xsl:text> <xsl:value-of select="translate(TD[1], '&quot;', '')"/><xsl:text>",</xsl:text>
 				  <xsl:text>"</xsl:text><xsl:value-of select="translate(TD[2], '&quot;', '')"/><xsl:text>",</xsl:text>
 				  <xsl:text>"</xsl:text><xsl:value-of select="translate(TD[3], '&quot;', '')"/><xsl:text>",</xsl:text>

@@ -16,7 +16,7 @@ public class Gestion_dom {
 		 new TransInfoHtml("./modele/dataSponsoring/dataSponsoring.htm","./modele/dataSponsoring/extDataSponsoring.xsl");		
 		 new TransInfoHtml("./modele/dataStandsSponsoring/dataStandsSponsoring.htm","./modele/dataStandsSponsoring/extDataStandsSponsoring.xsl");	
 		 new TransInfoHtml("./modele/dataDetailSponsoring/dataDetailSponsoring.htm","./modele/dataDetailSponsoring/extDetailSponsoring.xsl");	
-		 new TransInfoHtml("./modele/dataInscriptions/dataInscription.htm","./modele/dataInscriptions/extDataContact.xsl");				
+		 new TransInfoHtml("./modele/dataInscriptions/dataInscription.htm","./modele/dataInscriptions/extInscription.xsl");				
 		 new TransInfoHtml("./modele/dataContactSecondaire/dataContactSecondaire.htm","./modele/dataContactSecondaire/extDataContactSecondaire.xsl");		
 		 new TransInfoHtml("./modele/dataContactsPrincipal/dataContact.htm","./modele/dataContactsPrincipal/extDataContact.xsl");	
 		 new TransInfoHtml("./modele/dataContactInterne/dataContactInterne.htm","./modele/dataContactInterne/extDataContactInterne.xsl");	

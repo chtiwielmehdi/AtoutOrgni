@@ -7,22 +7,21 @@
 			
 			<xsl:for-each select="//TR">
 			<xsl:if test="TD[1]!='' and TD[2]!=''">
-			  <xsl:text>insert into sponsoring (IDcontact,NumeroDevis,NumeroFacture,Observation,DateEnvoiDossier,DateReceptionDossier,MontantTotalAR,MontantTotalR,ResteAR) values (</xsl:text>
+			  <xsl:text>insert into Sponsoring (IDcontact,NumeroDevis,NumeroFacture,Observation,DateEnvoiDossier,DateReceptionDossier,MontantHT,MontantTotalAR,MontantTotalR,ResteAR,InfosPaiement) values (</xsl:text>
 				   	<xsl:text>"</xsl:text> <xsl:value-of select="translate(TD[1], '&quot;', '')"/><xsl:text>",</xsl:text>
 				   	<xsl:text>"</xsl:text><xsl:value-of select="translate(TD[2], '&quot;', '')"/><xsl:text>",</xsl:text>
 				   	<xsl:text>"</xsl:text><xsl:value-of select="translate(TD[3], '&quot;', '')"/><xsl:text>",</xsl:text>
-				   	<xsl:text>"</xsl:text><xsl:value-of select="translate(TD[4], '&quot;', '')"/><xsl:text>",</xsl:text>
-				   	<xsl:text>"</xsl:text><xsl:value-of select="translate(TD[5], '&quot;', '')"/><xsl:text>",</xsl:text>
-				   	<xsl:text>"</xsl:text><xsl:value-of select="translate(TD[6], '&quot;', '')"/><xsl:text>",</xsl:text>
-				   	<xsl:text>"</xsl:text><xsl:value-of select="translate(TD[7], '&quot;', '')"/><xsl:text>",</xsl:text>
+					<xsl:text>"</xsl:text><xsl:value-of select="translate(TD[4], '&quot;', '')"/><xsl:text>",</xsl:text>
+				   	<xsl:text>STR_TO_DATE("</xsl:text><xsl:value-of select="translate(TD[5], '&quot;', '')"/><xsl:text>","%d/%m/%Y"),</xsl:text>
+				    <xsl:text>STR_TO_DATE("</xsl:text><xsl:value-of select="translate(TD[6], '&quot;', '')"/><xsl:text>","%d/%m/%Y"),</xsl:text>
+				  	<xsl:text>"</xsl:text><xsl:value-of select="0"/><xsl:text>",</xsl:text>	
+				  	<xsl:text>"</xsl:text><xsl:value-of select="translate(TD[7], '&quot;', '')"/><xsl:text>",</xsl:text>
 				  	<xsl:text>"</xsl:text><xsl:value-of select="translate(TD[8], '&quot;', '')"/><xsl:text>",</xsl:text>
 				  	<xsl:text>"</xsl:text><xsl:value-of select="translate(TD[9], '&quot;', '')"/><xsl:text>",</xsl:text>
-				  	<xsl:text>"</xsl:text><xsl:value-of select="translate(TD[10], '&quot;', '')"/><xsl:text>"</xsl:text>				  
-				    <xsl:text>);&#x0a;</xsl:text>	
+				  <xsl:text>"</xsl:text><xsl:value-of select="''"/><xsl:text>"</xsl:text>
+				  
+				  	<xsl:text>);&#x0a;</xsl:text>	
 				    </xsl:if>		    
 			</xsl:for-each>
 	</xsl:template>
-
-
-  
 </xsl:stylesheet>
